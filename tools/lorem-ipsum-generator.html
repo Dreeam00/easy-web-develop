@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lorem Ipsum ジェネレーター - Dreeam ToolBox</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">Dreeam ToolBox</a>
+        </div>
+    </nav>
+
+    <main class="container mt-5">
+        <div class="text-center mb-4">
+            <h2>Lorem Ipsum ジェネレーター</h2>
+            <p>ダミーテキストを生成します。</p>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row g-3 align-items-center mb-3">
+                            <div class="col-auto">
+                                <label for="generate-type" class="col-form-label">生成単位:</label>
+                            </div>
+                            <div class="col-auto">
+                                <select id="generate-type" class="form-select">
+                                    <option value="paragraphs">段落</option>
+                                    <option value="sentences">文</option>
+                                    <option value="words">単語</option>
+                                </select>
+                            </div>
+                            <div class="col-auto">
+                                <label for="count" class="col-form-label">数:</label>
+                            </div>
+                            <div class="col-auto">
+                                <input type="number" id="count" class="form-control" value="3" min="1" max="500">
+                            </div>
+                            <div class="col-auto">
+                                <button id="generate-btn" class="btn btn-primary">生成</button>
+                            </div>
+                        </div>
+                        <hr>
+                        <div id="output-text" class="bg-light p-3 rounded" style="min-height: 200px; max-height: 400px; overflow-y: auto;">
+                            ここにテキストが生成されます...
+                        </div>
+                        <button id="copy-text-btn" class="btn btn-secondary mt-3">テキストをコピー</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/lorem-ipsum-generator.js"></script>
+</body>
+</html>

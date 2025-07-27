@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selector Tester - Dreeam ToolBox</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <style>
+        textarea {
+            height: 300px;
+            font-family: monospace;
+        }
+        #html-input {
+            height: 400px;
+        }
+        #preview-area {
+            border: 1px solid #ccc;
+            padding: 15px;
+            min-height: 400px;
+            overflow: auto;
+        }
+        .highlighted-element {
+            outline: 2px solid red;
+            background-color: rgba(255, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">Dreeam ToolBox</a>
+        </div>
+    </nav>
+
+    <main class="container mt-5">
+        <div class="text-center mb-4">
+            <h2>CSS Selector Tester</h2>
+            <p>サンプルHTMLに対してCSSセレクターをテストします。</p>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <label for="html-input" class="form-label">HTMLコード</label>
+                <textarea id="html-input" class="form-control"><div class="container">
+    <p id="intro">Hello, <span>World</span>!</p>
+    <ul class="list">
+        <li class="item">Item 1</li>
+        <li class="item active">Item 2</li>
+        <li class="item">Item 3</li>
+    </ul>
+    <button class="btn">Click Me</button>
+</div></textarea>
+            </div>
+            <div class="col-md-6">
+                <label for="selector-input" class="form-label">CSSセレクター</label>
+                <input type="text" id="selector-input" class="form-control" value=".item.active">
+                <button id="test-selector-btn" class="btn btn-primary mt-2">テスト</button>
+                <hr>
+                <h5>プレビューと結果</h5>
+                <div id="preview-area"></div>
+                <p class="mt-2">マッチ数: <span id="match-count">0</span></p>
+                <div id="matched-elements-list"></div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/css-selector-tester.js"></script>
+</body>
+</html>

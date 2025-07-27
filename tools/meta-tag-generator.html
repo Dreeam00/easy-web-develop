@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meta Tag Generator - Dreeam ToolBox</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <style>
+        #meta-output {
+            height: 300px;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">Dreeam ToolBox</a>
+        </div>
+    </nav>
+
+    <main class="container mt-5">
+        <div class="text-center mb-4">
+            <h2>Meta Tag Generator</h2>
+            <p>SEOおよびソーシャルメディア用の必須HTMLメタタグを生成します。</p>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="mb-3">
+                            <label for="page-title" class="form-label">ページタイトル</label>
+                            <input type="text" id="page-title" class="form-control" placeholder="例: My Awesome Website">
+                        </div>
+                        <div class="mb-3">
+                            <label for="description" class="form-label">説明 (Description)</label>
+                            <textarea id="description" class="form-control" rows="3" placeholder="例: This is a description of my awesome website."></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="keywords" class="form-label">キーワード (Keywords, オプション)</label>
+                            <input type="text" id="keywords" class="form-control" placeholder="例: web, development, tools">
+                        </div>
+                        <div class="mb-3">
+                            <label for="author" class="form-label">著者 (Author, オプション)</label>
+                            <input type="text" id="author" class="form-control" placeholder="例: John Doe">
+                        </div>
+                        <hr>
+                        <h5>Open Graph (OGP) 設定</h5>
+                        <div class="mb-3">
+                            <label for="og-url" class="form-label">OG URL</label>
+                            <input type="url" id="og-url" class="form-control" placeholder="例: https://example.com/">
+                        </div>
+                        <div class="mb-3">
+                            <label for="og-type" class="form-label">OG Type</label>
+                            <input type="text" id="og-type" class="form-control" value="website" placeholder="例: website, article">
+                        </div>
+                        <div class="mb-3">
+                            <label for="og-image" class="form-label">OG Image URL</label>
+                            <input type="url" id="og-image" class="form-control" placeholder="例: https://example.com/image.jpg">
+                        </div>
+                        <div class="mb-3">
+                            <label for="og-site-name" class="form-label">OG Site Name</label>
+                            <input type="text" id="og-site-name" class="form-control" placeholder="例: My Website">
+                        </div>
+                        <hr>
+                        <h5>Twitter Card 設定</h5>
+                        <div class="mb-3">
+                            <label for="twitter-card-type" class="form-label">Twitter Card Type</label>
+                            <select id="twitter-card-type" class="form-select">
+                                <option value="summary">summary</option>
+                                <option value="summary_large_image">summary_large_image</option>
+                                <option value="app">app</option>
+                                <option value="player">player</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="twitter-site" class="form-label">Twitter Site (@username)</label>
+                            <input type="text" id="twitter-site" class="form-control" placeholder="例: @yourtwitter">
+                        </div>
+                        <div class="mb-3">
+                            <label for="twitter-creator" class="form-label">Twitter Creator (@username)</label>
+                            <input type="text" id="twitter-creator" class="form-control" placeholder="例: @yourname">
+                        </div>
+                        <button id="generate-meta-btn" class="btn btn-primary mb-3">メタタグを生成</button>
+                        <hr>
+                        <textarea id="meta-output" class="form-control" readonly></textarea>
+                        <button id="copy-meta-btn" class="btn btn-secondary mt-3">コピー</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/meta-tag-generator.js"></script>
+</body>
+</html>

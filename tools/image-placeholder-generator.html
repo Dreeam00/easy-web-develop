@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Placeholder Generator - Dreeam ToolBox</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <style>
+        #placeholder-image-preview {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ccc;
+            margin-top: 1rem;
+        }
+        .code-output-area {
+            word-break: break-all;
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+            padding: 15px;
+            border-radius: .25rem;
+            font-family: monospace;
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">Dreeam ToolBox</a>
+        </div>
+    </nav>
+
+    <main class="container mt-5">
+        <div class="text-center mb-4">
+            <h2>Image Placeholder Generator</h2>
+            <p>カスタムの寸法とテキストでプレースホルダー画像を生成します。</p>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <label for="width" class="form-label">幅 (px)</label>
+                                <input type="number" id="width" class="form-control" value="300" min="1">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="height" class="form-label">高さ (px)</label>
+                                <input type="number" id="height" class="form-control" value="200" min="1">
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="text" class="form-label">表示テキスト (オプション)</label>
+                            <input type="text" id="text" class="form-control" placeholder="例: Hello World">
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <label for="bg-color" class="form-label">背景色</label>
+                                <input type="color" id="bg-color" class="form-control form-control-color" value="#cccccc">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="text-color" class="form-label">文字色</label>
+                                <input type="color" id="text-color" class="form-control form-control-color" value="#000000">
+                            </div>
+                        </div>
+                        <button id="generate-btn" class="btn btn-primary mb-3">画像を生成</button>
+                        <hr>
+                        <div class="text-center">
+                            <img id="placeholder-image-preview" src="" alt="プレースホルダー画像">
+                        </div>
+                        <div class="mb-3 mt-3">
+                            <label for="image-url" class="form-label">画像URL</label>
+                            <input type="text" id="image-url" class="form-control" readonly>
+                        </div>
+                        <button id="copy-url-btn" class="btn btn-secondary">URLをコピー</button>
+                        <button id="download-image-btn" class="btn btn-success ms-2">画像をダウンロード</button>
+                        <div class="mb-3 mt-3">
+                            <label for="img-tag-output" class="form-label">&lt;img&gt; タグ</label>
+                            <div id="img-tag-output" class="code-output-area"></div>
+                            <button id="copy-img-tag-btn" class="btn btn-secondary mt-2">コピー</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/image-placeholder-generator.js"></script>
+</body>
+</html>

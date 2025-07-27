@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>カラーパレット - Dreeam ToolBox</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <style>
+        .color-box {
+            width: 100%;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.2s;
+            border-radius: 0.25rem;
+        }
+        .color-box:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">Dreeam ToolBox</a>
+        </div>
+    </nav>
+
+    <main class="container mt-5">
+        <div class="text-center mb-4">
+            <h2>カラーパレット</h2>
+            <p>クリックしてカラーコードをコピーします。</p>
+        </div>
+
+        <div class="row mb-4">
+            <div class="col-md-8 mx-auto">
+                <input type="search" id="search-palette" class="form-control" placeholder="色名やコードを検索...">
+            </div>
+        </div>
+
+        <div id="palette-container">
+            <!-- カラーボックスはJSで動的に追加されます -->
+        </div>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tinycolor/1.6.0/tinycolor.min.js"></script>
+    <script src="js/color-palette.js"></script>
+</body>
+</html>

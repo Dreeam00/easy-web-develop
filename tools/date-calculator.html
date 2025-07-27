@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Calculator - Dreeam ToolBox</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">Dreeam ToolBox</a>
+        </div>
+    </nav>
+
+    <main class="container mt-5">
+        <div class="text-center mb-4">
+            <h2>Date Calculator</h2>
+            <p>日付に日、月、年を加算/減算します。</p>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="mb-3">
+                            <label for="start-date" class="form-label">開始日</label>
+                            <input type="date" id="start-date" class="form-control">
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-md-4">
+                                <label for="years" class="form-label">年</label>
+                                <input type="number" id="years" class="form-control" value="0">
+                            </div>
+                            <div class="col-md-4">
+                                <label for="months" class="form-label">月</label>
+                                <input type="number" id="months" class="form-control" value="0">
+                            </div>
+                            <div class="col-md-4">
+                                <label for="days" class="form-label">日</label>
+                                <input type="number" id="days" class="form-control" value="0">
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="operation" class="form-label">操作</label>
+                            <select id="operation" class="form-select">
+                                <option value="add">加算</option>
+                                <option value="subtract">減算</option>
+                            </select>
+                        </div>
+                        <button id="calculate-btn" class="btn btn-primary mb-3">計算</button>
+                        <hr>
+                        <div class="mb-3">
+                            <label for="result-date" class="form-label">結果日</label>
+                            <input type="text" id="result-date" class="form-control" readonly>
+                        </div>
+                        <div class="mb-3">
+                            <label for="date-format" class="form-label">日付フォーマット</label>
+                            <select id="date-format" class="form-select">
+                                <option value="YYYY-MM-DD">YYYY-MM-DD (2023-01-01)</option>
+                                <option value="MM/DD/YYYY">MM/DD/YYYY (01/01/2023)</option>
+                                <option value="DD/MM/YYYY">DD/MM/YYYY (01/01/2023)</option>
+                                <option value="YYYY年MM月DD日">YYYY年MM月DD日 (2023年01月01日)</option>
+                                <option value="ISO">ISO (2023-01-01T00:00:00.000Z)</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/date-calculator.js"></script>
+</body>
+</html>

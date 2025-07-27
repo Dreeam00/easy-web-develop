@@ -1,0 +1,16 @@
+body {
+    font-family: 'Helvetica Neue', 'Arial', sans-serif;
+}
+
+.tool-card {
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.tool-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+}
+
+.tool-card .card-body {
+    min-height: 150px; /* カードの高さを揃える */
+}

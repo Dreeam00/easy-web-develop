@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>単位コンバーター - Dreeam ToolBox</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">Dreeam ToolBox</a>
+        </div>
+    </nav>
+
+    <main class="container mt-5">
+        <div class="text-center mb-4">
+            <h2>単位コンバーター</h2>
+            <p>CSSの様々な単位を相互に変換します。</p>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="mb-3">
+                            <label for="base-font-size" class="form-label">ルート要素のフォントサイズ (px)</label>
+                            <input type="number" id="base-font-size" class="form-control" value="16">
+                        </div>
+                        <hr>
+                        <div class="row align-items-center mb-3">
+                            <div class="col-sm-5">
+                                <label for="input-value" class="form-label">入力値</label>
+                                <input type="number" id="input-value" class="form-control" placeholder="値を入力">
+                            </div>
+                            <div class="col-sm-2">
+                                <label for="input-unit" class="form-label">単位</label>
+                                <select id="input-unit" class="form-select">
+                                    <option value="px">px</option>
+                                    <option value="rem">rem</option>
+                                    <option value="em">em</option>
+                                    <option value="pt">pt</option>
+                                    <option value="percent">%</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-2 text-center fs-4">→</div>
+                            <div class="col-sm-2">
+                                <label for="output-unit" class="form-label">変換先</label>
+                                <select id="output-unit" class="form-select">
+                                    <option value="px">px</option>
+                                    <option value="rem" selected>rem</option>
+                                    <option value="em">em</option>
+                                    <option value="pt">pt</option>
+                                    <option value="percent">%</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="output-value" class="form-label">変換結果</label>
+                            <input type="text" id="output-value" class="form-control" readonly>
+                        </div>
+                        <button id="convert-btn" class="btn btn-primary">変換</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/unit-converter.js"></script>
+</body>
+</html>

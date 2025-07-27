@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout プレイグラウンド - Dreeam ToolBox</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <style>
+        #grid-container {
+            border: 2px solid #007bff;
+            min-height: 300px;
+            display: grid;
+            background-color: #f8f9fa;
+            padding: 10px;
+        }
+        .grid-item {
+            background-color: #6c757d;
+            color: white;
+            padding: 10px;
+            margin: 5px;
+            text-align: center;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+        #css-output {
+            white-space: pre;
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+            padding: 15px;
+            border-radius: .25rem;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">Dreeam ToolBox</a>
+        </div>
+    </nav>
+
+    <main class="container-fluid mt-5">
+        <div class="text-center mb-4">
+            <h2>Grid Layout プレイグラウンド</h2>
+            <p>CSS Gridのプロパティを視覚的に操作し、結果を確認できます。</p>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-4">
+                <h4>コンテナプロパティ</h4>
+                <div class="mb-3">
+                    <label for="grid-template-columns" class="form-label">grid-template-columns</label>
+                    <input type="text" id="grid-template-columns" class="form-control" value="1fr 1fr 1fr">
+                </div>
+                <div class="mb-3">
+                    <label for="grid-template-rows" class="form-label">grid-template-rows</label>
+                    <input type="text" id="grid-template-rows" class="form-control" value="auto">
+                </div>
+                <div class="mb-3">
+                    <label for="gap" class="form-label">gap</label>
+                    <input type="text" id="gap" class="form-control" value="10px">
+                </div>
+                <div class="mb-3">
+                    <label for="justify-items" class="form-label">justify-items</label>
+                    <select id="justify-items" class="form-select">
+                        <option value="stretch">stretch</option>
+                        <option value="start">start</option>
+                        <option value="end">end</option>
+                        <option value="center">center</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="align-items" class="form-label">align-items</label>
+                    <select id="align-items" class="form-select">
+                        <option value="stretch">stretch</option>
+                        <option value="start">start</option>
+                        <option value="end">end</option>
+                        <option value="center">center</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="justify-content" class="form-label">justify-content</label>
+                    <select id="justify-content" class="form-select">
+                        <option value="stretch">stretch</option>
+                        <option value="start">start</option>
+                        <option value="end">end</option>
+                        <option value="center">center</option>
+                        <option value="space-between">space-between</option>
+                        <option value="space-around">space-around</option>
+                        <option value="space-evenly">space-evenly</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="align-content" class="form-label">align-content</label>
+                    <select id="align-content" class="form-select">
+                        <option value="stretch">stretch</option>
+                        <option value="start">start</option>
+                        <option value="end">end</option>
+                        <option value="center">center</option>
+                        <option value="space-between">space-between</option>
+                        <option value="space-around">space-around</option>
+                        <option value="space-evenly">space-evenly</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="col-lg-8">
+                <h4>プレビュー</h4>
+                <div id="grid-container">
+                    <div class="grid-item">1</div>
+                    <div class="grid-item">2</div>
+                    <div class="grid-item">3</div>
+                    <div class="grid-item">4</div>
+                    <div class="grid-item">5</div>
+                    <div class="grid-item">6</div>
+                </div>
+                <h4 class="mt-4">CSSコード</h4>
+                <pre id="css-output"></pre>
+                <button id="copy-css-btn" class="btn btn-secondary">コードをコピー</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/grid-playground.js"></script>
+</body>
+</html>

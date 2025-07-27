@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>カラーコードコンバーター - Dreeam ToolBox</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <style>
+        .color-preview-swatch {
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            border: 1px solid #ccc;
+            vertical-align: middle;
+            margin-left: 10px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">Dreeam ToolBox</a>
+        </div>
+    </nav>
+
+    <main class="container mt-5">
+        <div class="text-center mb-4">
+            <h2>カラーコードコンバーター</h2>
+            <p>HEX, RGB, HSLのカラーコードを相互に変換します。</p>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="mb-3">
+                            <label for="color-input-picker" class="form-label">色を選択</label>
+                            <input type="color" id="color-input-picker" class="form-control form-control-color w-100" value="#1e90ff">
+                        </div>
+                        <hr>
+                        <div class="mb-3">
+                            <label for="hex-input" class="form-label">HEX <span id="hex-preview" class="color-preview-swatch"></span></label>
+                            <input type="text" id="hex-input" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label for="rgb-input" class="form-label">RGB <span id="rgb-preview" class="color-preview-swatch"></span></label>
+                            <input type="text" id="rgb-input" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label for="hsl-input" class="form-label">HSL <span id="hsl-preview" class="color-preview-swatch"></span></label>
+                            <input type="text" id="hsl-input" class="form-control">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tinycolor/1.6.0/tinycolor.min.js"></script>
+    <script src="js/color-converter.js"></script>
+</body>
+</html>
