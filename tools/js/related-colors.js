@@ -19,8 +19,16 @@ document.addEventListener('DOMContentLoaded', () => {
             'テトラッド (4色)': color.tetrad().map(c => c.toHexString()),
             'モノクロ (明)': [color.lighten(20).toHexString()],
             'モノクロ (暗)': [color.darken(20).toHexString()],
-            'シェード': [color.shade(10).toHexString(), color.shade(20).toHexString(), color.shade(30).toHexString()],
-            'ティント': [color.tint(10).toHexString(), color.tint(20).toHexString(), color.tint(30).toHexString()]
+            'シェード': [
+                color.darken(10).toHexString(),
+                color.darken(20).toHexString(),
+                color.darken(30).toHexString()
+            ],
+            'ティント': [
+                color.lighten(10).toHexString(),
+                color.lighten(20).toHexString(),
+                color.lighten(30).toHexString()
+            ]
         };
 
         let html = '';
@@ -46,19 +54,16 @@ document.addEventListener('DOMContentLoaded', () => {
         container.innerHTML = html;
     }
 
-    // Initial display
     generateRelatedColors();
 
-    // Event listener for base color input
     baseColorInput.addEventListener('input', generateRelatedColors);
 
-    // Event listener for clicking on generated colors
     container.addEventListener('click', (e) => {
         const clickedSwatch = e.target.closest('.color-swatch');
         if (clickedSwatch) {
             const newBaseColor = clickedSwatch.dataset.color;
             baseColorInput.value = newBaseColor;
-            generateRelatedColors(); // Regenerate with new base color
+            generateRelatedColors();
         }
     });
 });
