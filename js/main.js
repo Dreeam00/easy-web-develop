@@ -10,8 +10,11 @@ document.addEventListener('DOMContentLoaded', () => {
         { name: 'カラーブレンダー', description: '2つの色を指定比率で混合', url: 'tools/color-blender.html', icon: 'fas fa-fill-drip', category: 'Colors' },
 
         // CSS & Design
+        { name: 'Border Radius Generator', description: 'border-radiusのCSSコードを視覚的に生成', url: 'tools/border-radius-generator.html', icon: 'fas fa-vector-square', category: 'CSS & Design' },
         { name: 'Box Shadow ジェネレーター', description: 'box-shadowのCSSコードを視覚的に生成', url: 'tools/box-shadow-generator.html', icon: 'fas fa-box-open', category: 'CSS & Design' },
         { name: 'CSS Minifier', description: 'CSSコードを圧縮してファイルサイズを削減', url: 'tools/css-minifier.html', icon: 'fa-solid fa-file-zipper', category: 'CSS & Design' },
+        { name: 'CSS Color Editor', description: '文字色、背景色、ボーダー色を編集', url: 'tools/css-color-editor.html', icon: 'fas fa-palette', category: 'CSS & Design' },
+        { name: 'CSS Size Editor', description: '幅、高さ、余白などを編集', url: 'tools/css-size-editor.html', icon: 'fas fa-ruler-combined', category: 'CSS & Design' },
         { name: 'CSS Reset/Normalize', description: '基本的なCSSリセット/Normalizeスタイルシートを生成', url: 'tools/css-reset-normalize.html', icon: 'fas fa-eraser', category: 'CSS & Design' },
         { name: 'Flexbox プレイグラウンド', description: 'Flexboxプロパティを視覚的に操作', url: 'tools/flexbox-playground.html', icon: 'fas fa-grip-lines', category: 'CSS & Design' },
         { name: 'Grid Layout プレイグラウンド', description: 'CSS Gridプロパティを視覚的に操作', url: 'tools/grid-playground.html', icon: 'fas fa-th', category: 'CSS & Design' },

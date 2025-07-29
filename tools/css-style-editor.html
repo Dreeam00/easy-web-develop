@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Style Editor</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>CSS Style Editor</h1>
+        <div class="editor-container">
+            <div class="controls">
+                <h2>Color</h2>
+                <label for="text-color">Text Color</label>
+                <input type="color" id="text-color" value="#000000">
+                <label for="bg-color">Background Color</label>
+                <input type="color" id="bg-color" value="#ffffff">
+                <label for="border-color">Border Color</label>
+                <input type="color" id="border-color" value="#000000">
+
+                <h2>Sizing</h2>
+                <label for="width">Width (px)</label>
+                <input type="range" id="width" min="50" max="500" value="200">
+                <label for="height">Height (px)</label>
+                <input type="range" id="height" min="50" max="500" value="200">
+                <label for="padding">Padding (px)</label>
+                <input type="range" id="padding" min="0" max="50" value="10">
+                <label for="margin">Margin (px)</label>
+                <input type="range" id="margin" min="0" max="50" value="10">
+                <label for="border-width">Border Width (px)</label>
+                <input type="range" id="border-width" min="0" max="20" value="1">
+            </div>
+            <div class="preview-container">
+                <div class="preview-box-style-editor">Hello World!</div>
+            </div>
+        </div>
+        <textarea id="css-output-style-editor" readonly></textarea>
+    </div>
+    <script src="js/css-style-editor.js"></script>
+</body>
+</html>

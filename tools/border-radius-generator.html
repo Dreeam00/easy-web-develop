@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Border Radius Generator - Dreeam ToolBox</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">Dreeam ToolBox</a>
+        </div>
+    </nav>
+
+    <main class="container mt-5">
+        <div class="text-center mb-4">
+            <h2>Border Radius Generator</h2>
+            <p>スライダーを調整して<code>border-radius</code>のコードを生成します。</p>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-6">
+                <h4>プレビュー</h4>
+                <div class="d-flex justify-content-center align-items-center bg-light rounded p-3" style="height: 300px;">
+                    <div class="preview-box" style="width: 200px; height: 200px; background-color: #6c757d;"></div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <h4>コントロール</h4>
+                <div class="controls">
+                    <label for="all-corners" class="form-label">All Corners</label>
+                    <input type="range" class="form-range" id="all-corners" min="0" max="100" value="10">
+                    <label for="top-left" class="form-label">Top Left</label>
+                    <input type="range" class="form-range" id="top-left" min="0" max="100" value="10">
+                    <label for="top-right" class="form-label">Top Right</label>
+                    <input type="range" class="form-range" id="top-right" min="0" max="100" value="10">
+                    <label for="bottom-right" class="form-label">Bottom Right</label>
+                    <input type="range" class="form-range" id="bottom-right" min="0" max="100" value="10">
+                    <label for="bottom-left" class="form-label">Bottom Left</label>
+                    <input type="range" class="form-range" id="bottom-left" min="0" max="100" value="10">
+                </div>
+                <h4 class="mt-4">CSSコード</h4>
+                <textarea id="css-output" class="form-control" readonly rows="3"></textarea>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/border-radius-generator.js"></script>
+</body>
+</html>

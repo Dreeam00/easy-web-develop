@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Size Editor - Dreeam ToolBox</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">Dreeam ToolBox</a>
+        </div>
+    </nav>
+
+    <main class="container mt-5">
+        <div class="text-center mb-4">
+            <h2>CSS Size Editor</h2>
+            <p>スライダーを調整して、要素のサイズと余白を編集します。</p>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-6">
+                <h4>プレビュー</h4>
+                <div class="d-flex justify-content-center align-items-center bg-light rounded p-3" style="height: 500px;">
+                    <div class="preview-box-size-editor" style="background-color: #f0f0f0; border: 1px solid #ccc;"></div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <h4>コントロール</h4>
+                <div class="controls">
+                    <label for="width" class="form-label">Width (px)</label>
+                    <input type="range" class="form-range" id="width" min="50" max="500" value="200">
+                    <label for="height" class="form-label">Height (px)</label>
+                    <input type="range" class="form-range" id="height" min="50" max="500" value="200">
+                    <label for="padding" class="form-label">Padding (px)</label>
+                    <input type="range" class="form-range" id="padding" min="0" max="50" value="10">
+                    <label for="margin" class="form-label">Margin (px)</label>
+                    <input type="range" class="form-range" id="margin" min="0" max="50" value="10">
+                    <label for="border-width" class="form-label">Border Width (px)</label>
+                    <input type="range" class="form-range" id="border-width" min="0" max="20" value="1">
+                </div>
+                <h4 class="mt-4">CSSコード</h4>
+                <textarea id="css-output-size-editor" class="form-control" readonly rows="6"></textarea>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/css-size-editor.js"></script>
+</body>
+</html>
